@@ -497,7 +497,7 @@
 //experiment 7
 document.addEventListener('DOMContentLoaded', () => {
     const gridContainer = document.getElementById('grid-container');
-    const colors = ['#FF5733', '#33FF57', '#3357FF', '#F3FF33']; // Replace these with any 4 colors
+    const colors = ['#FF5733', '#33FF57', '#3357FF', '#F3FF33', '#FF33A6', '#33FFF1', '#FF8C33', '#FF3333']; // Replace these with any 4 colors
 
     // Function to invert color
     function invertColor(hex) {
@@ -534,7 +534,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Change colors every 500ms
-    setInterval(changeColors, 15)
+    setInterval(changeColors, 50)
 
     // Initial color assignment
     changeColors();
@@ -595,11 +595,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Function to randomly move the grid container
     function wobbleGrid() {
-        const x = Math.random() * 100 - 50; // Random value between -50 and 50
-        const y = Math.random() * 100 - 50; // Random value between -50 and 50
+        const x = Math.random() * 1000 - 500; // Random value between -50 and 50
+        const y = Math.random() * 1000 - 500; // Random value between -50 and 50
         gridContainer.style.transform = `translate(${x}px, ${y}px)`;
     }
 
     // Wobble the grid every 100ms
-    setInterval(wobbleGrid, 100);
+    setInterval(wobbleGrid, 5);
 });
